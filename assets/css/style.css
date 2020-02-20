@@ -3,10 +3,19 @@ body{
   }
   
   .jumbotron{
-    background: #003333;
-    color: white;
+    background: powderblue;
+    color: navy;
   }
   
 h3{
     text-align: center;
+}
+
+strong{
+    color: navy;
+    
+}
+
+.panel-heading{
+    background: powderblue;
 }
