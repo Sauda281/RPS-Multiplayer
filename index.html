@@ -1,45 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <title>Rock Paper Scissors</title>
+	<meta charset="utf-8">
+	<title>Train Scheduler</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+	
 </head>
-
 <body>
 
-    <header>
-    <h1>Rock Paper Scissors Shoot</h1>
-    </header>
-    <div class= score-board>
-        <div id = "user" class ="badge">User</div>
-        <div id = "computer" class ="badge">comp</div>
-        <span id = "user-score">0</span>:<span id="computer-score">0</span>
-    </div>
-            <div class = "result">
-                
+	
+	<div class="container">
 
-            </div>
-        <div class="choices">
-            <div class="choice" id="rock">
-                <img src ="https://previews.123rf.com/images/laymul/laymul1909/laymul190900002/131636529-fist.jpg" width=75px height=75px alt="">
-                </div>
-                <div class="choice" id= "paper">
-                <img src ="https://previews.123rf.com/images/laymul/laymul1909/laymul190900003/131636534-hand.jpg" width=75px height=75px alt="">
-                </div>
-                <div class="choice" id="scissors">
-                <img src ="https://previews.123rf.com/images/laymul/laymul1908/laymul190800186/130811854-peace-sign.jpg" width= 75px height= 75px alt="">
-                </div>
-            </div>
-        </div>
-     
-        
-        
-        <script src= "assets/javascript/game.js"></script>
+		<div class="jumbotron">
+            <!-- <img src="https://images.unsplash.com/photo-1527295110-5145f6b148d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="" height="55" width="55"> -->
+        <h1 class="text-center">Anytime is Time is Train Time!</h1>
+        <h3>Choo Choo. Chee Chee</h3>
 
-    </body>
-    
+	  </div>
+
+	  <div class="row">
+
+	    <div class="col-lg-12">
+
+			  
+		    <div class="panel panel-success">
+		      <div class="panel-heading">
+		        <h3 class="panel-title"><strong>Current Train Schedule</strong></h3>
+		      </div>
+		      <div class="panel-body">
+		        <table class="table table-hover" id='train-table'>
+		          <thead>
+		            <tr>
+		              <th>Train Name</th>
+		              <th>Destination</th>
+		              <th>Frequency (min)</th>
+		              <th>Next Arrival</th>
+		              <th>Minutes Away</th>
+		            </tr>
+		          </thead>
+		          <tbody>
+		          </tbody>
+		        </table>
+		      </div>
+			</div>
+
+			
+	    <div class="panel panel-success">
+	      <div class="panel-heading">
+	        <h3 class="panel-title"><strong>Add Train</strong></h3>
+	      </div>
+	      <div class="panel-body">
+
+	        
+	        <form>
+	          <div class="form-group">
+	            <label for="train-name-input">Train Name</label>
+	            <input class="form-control" id="train-name-input" type="text">
+	          </div>
+	          <div class="form-group">
+	            <label for="dest-input">Destination</label>
+	            <input class="form-control" id="dest-input" type="text">
+	          </div>
+	          <div class="form-group">
+	            <label for="firstTrain-input">First Train Time (HH:mm - military time)</label>
+	            <input class="form-control" id="firstTrain-input" type="text">
+	          </div>
+	          <div class="form-group">
+	            <label for="freq-input">Frequency (min)</label>
+	            <input class="form-control" id="freq-input" type="text">
+	          </div>
+	          <button class="btn btn-success" id="add-train-btn" type="submit">Submit</button>
+	        </form>
+	      </div>
+	    </div>
+	</div>
+  <script src="assets/javascript/game.js"></script>
+</body>
 </html>
