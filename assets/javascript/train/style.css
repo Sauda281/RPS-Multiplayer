@@ -1,0 +1,12 @@
+body{
+    background: url("https://media3.giphy.com/media/l41lZZqhIUA6IJNDO/giphy.gif?cid=790b7611f17d77f200afae5206ad3ae0a339358348b0394f&rid=giphy.gif");
+  }
+  
+  .jumbotron{
+    background: #003333;
+    color: white;
+  }
+  
+h3{
+    text-align: center;
+}

@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: url("https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+}
+
+.button{
+    text-align: center;
+    font-weight: 600;
+    font-size: 30px;
+    color: white;
+    
+}
+
+#btn {
+    text-align: center;
+    background: green;
+}
+   
+#btn i{
+    margin: 5px;
+    padding: 10px;
+    
+}
+
+img {
+    padding:10px;
+    margin: 50px;
+    display: inline-block;
+    background: greenyellow;
+}
+
+p{
+    color: green;
+    display: inline-block;
+    padding:10px;
+    margin: 50px;
+}
